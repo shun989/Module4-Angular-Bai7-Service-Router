@@ -1,0 +1,9 @@
+<div *ngIf="word">
+
+  <h2>{{word.word | uppercase}} Details</h2>
+  <div><span>id: </span>{{word.id}}</div>
+  <div>
+    <label>Từ <strong style="color: red">{{word.word}}</strong> nghĩa là:  </label><h3>{{word.mean}}</h3>
+<!--    <input id="hero-name" [(ngModel)]="word.word" > <br>-->
+  </div>
+</div>

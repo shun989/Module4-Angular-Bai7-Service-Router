@@ -1,0 +1,10 @@
+<h2>Words List</h2>
+<ul class="heroes">
+  <li *ngFor="let item of words"
+      [class.selected]="item === selectedWord"
+      (click)="onSelect(item)">
+    <span class="badge">{{item.id}}</span> {{item.word}}
+  </li>
+</ul>
+
+<app-dictionary-detail [word]="selectedWord"></app-dictionary-detail>
