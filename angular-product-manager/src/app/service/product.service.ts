@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
 import {Product} from "../model/product";
+import {ToastrService} from "ngx-toastr";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-
-  constructor() { }
 
   products: Product[] = [{
     id: 1,
@@ -35,6 +34,8 @@ export class ProductService {
     description: 'Like new'
   }];
 
+  constructor() { }
+
   getAll() {
     return this.products;
   }
@@ -42,4 +43,22 @@ export class ProductService {
   saveProduct(product: Product) {
     this.products.push(product);
   }
+  //
+  // findById(id: number) {
+  //   return this.products.find(product => product.id === id);
+  // }
+
+  // updateProduct(id: number, product: Product) {
+  //   for (let i = 0; i < this.products.length; i++) {
+  //     if (this.products[i].id === id) {
+  //       this.products[i] = product;
+  //     }
+  //   }
+  // }
+
+  // deleteProduct(id: number) {
+  //   this.products = this.products.filter(product => {
+  //     return product.id !== id;
+  //   });
+  // }
 }
